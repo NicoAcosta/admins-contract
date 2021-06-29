@@ -8,6 +8,18 @@ run `npm install`
 ### `onlyAdmins`
 Reverts if sender is not an admin.
 
+
+## Events
+
+### `NewAdmin`
+```solidity
+event NewAdmin(address indexed _sender, address indexed _newAdmin)
+```
+
+### `AdminRemoval`
+```solidity
+event AdminRemoval(address indexed _sender, address indexed _removedAdmin)
+```
 ## Constructor
 Sets sender as admin.
 
