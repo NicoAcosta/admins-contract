@@ -40,7 +40,7 @@ function addAdmins(address[] memory newAdmins) external onlyOwner
 function removeAdmin(address admin) external onlyOwner
 ```
 
-### `isAdmin`
+### `isAdmin` (sender)
 ```solidity
 function isAdmin() external view returns (bool)
 ```
