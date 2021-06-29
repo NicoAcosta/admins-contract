@@ -1,6 +1,6 @@
 # Multiple admins contract
 
-Inherits from [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts)'s [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) contract.
+Inherits from [@OpenZeppelin](https://github.com/OpenZeppelin)'s [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) contract.
 
 run `npm install`
 
