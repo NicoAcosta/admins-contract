@@ -1,0 +1,2 @@
+*.js linguist-detectable=false
+*.solidity linguist-detectable=true
