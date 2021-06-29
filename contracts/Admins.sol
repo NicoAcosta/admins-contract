@@ -4,14 +4,18 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Admins is Ownable {
-    mapping(address => bool) private adminRole;
+    event NewAdmin(address indexed _sender, address indexed _newAdmin);
+    event AdminRemoval(address indexed _sender, address indexed _removedAdmin);
+
+    mapping(address => bool) private _adminRole;
 
     constructor() {
         _addAdmin(_msgSender());
     }
 
     function _addAdmin(address newAdmin) private {
-        adminRole[newAdmin] = true;
+        _adminRole[newAdmin] = true;
+        emit NewAdmin(_msgSender(), newAdmin);
     }
 
     function addAdmin(address newAdmin) external onlyOwner {
@@ -30,7 +34,8 @@ contract Admins is Ownable {
     }
 
     function _removeAdmin(address admin) private {
-        adminRole[admin] = false;
+        _adminRole[admin] = false;
+        emit AdminRemoval(_msgSender(), admin);
     }
 
     function removeAdmin(address admin) external onlyOwner {
@@ -39,7 +44,7 @@ contract Admins is Ownable {
     }
 
     function _isAdmin(address someAddress) private view returns (bool) {
-        return adminRole[someAddress];
+        return _adminRole[someAddress];
     }
 
     modifier onlyAdmins() {
