@@ -1,0 +1,35 @@
+{
+  "name": "admins-contract",
+  "version": "1.0.0",
+  "description": "Solidity smart contract to add multiple admins control to certain functions. Inherits OpenZeppelin's Ownable contract.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoAcosta/admins-contract.git"
+  },
+  "keywords": [
+    "Solidity",
+    "smartcontract",
+    "ethereum"
+  ],
+  "author": "Nicolás Acosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoAcosta/admins-contract/issues"
+  },
+  "homepage": "https://github.com/NicoAcosta/admins-contract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.0",
+    "hardhat": "^2.4.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0"
+  }
+}
