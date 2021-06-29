@@ -47,7 +47,7 @@ function isAdmin() external view returns (bool)
 
 ### `isAdminAddress`
 ```solidity
-function isAdminAddress(address someAddress)
+function isAdminAddress(address someAddress) external view onlyAdmins returns (bool)
 ```
 
 
