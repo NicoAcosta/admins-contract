@@ -20,7 +20,10 @@ async function main() {
 	await contract.deployed()
 	;[owner, addr1, addr2, addr3, addr4] = await ethers.getSigners()
 
-	console.log('Admins contract deployed by:', owner.address)
+	console.log('Admins contract deployed to:')
+	console.log(contract.address)
+	console.log('Deployed by:')
+	console.log(owner.address)
 
 	const addAdmin1 = await contract.addAdmin(addr1.address)
 	await addAdmin1.wait()
